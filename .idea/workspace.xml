@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment3.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment5.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment3.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment4.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment5.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/CryptoUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +40,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "14",
-    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/Cryptography-project/src/project/PeerTwoMessages",
+    "last_opened_file_path": "C:/Users/grema/OneDrive - purdue.edu/Purdue/Fall 2023/CS 355/Project/Cryptography-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,6 +90,7 @@
       <workItem from="1701113240623" duration="5837000" />
       <workItem from="1701193214025" duration="427000" />
       <workItem from="1701193702959" duration="454000" />
+      <workItem from="1701196411109" duration="1910000" />
     </task>
     <task id="LOCAL-00001" summary="Not compiling checkpoint">
       <created>1701038657737</created>
