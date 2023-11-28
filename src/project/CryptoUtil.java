@@ -77,7 +77,7 @@ public class CryptoUtil {
 //        String bobMessage = "HELLO123";
 //        String bobSignature = bobCrypto.signData(bobMessage.getBytes());
 //
-//        // Alice and Bob exchange signatures
+//        // Alice and Bob exchange signatures and public keys
 //
 //        // Alice and Bob hash their messages
 //        String aliceHash = aliceCrypto.hashMessage(aliceMessage);
