@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="Networking complete">
-      <change afterPath="$PROJECT_DIR$/src/project/Encryptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project/Peer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StartProtocol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Encrypter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SignatureProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/SignatureProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Verifier.java" beforeDir="false" />
+    <list default="true" id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment1.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment2.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment3.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment4.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerOneMessages/codeSegment5.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment1.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment2.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment3.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment4.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/PeerTwoMessages/codeSegment5.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "14",
-    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/Cryptography-project",
+    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/Cryptography-project/src/project/PeerTwoMessages",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -58,6 +60,7 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\project\PeerTwoMessages" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\project\PeerOneMessages" />
       <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\ClientTwoMessages" />
       <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\ClientOneMessages" />
     </key>
@@ -87,7 +90,7 @@
       <workItem from="1701039626917" duration="1946000" />
       <workItem from="1701113240623" duration="5837000" />
       <workItem from="1701193214025" duration="427000" />
-      <workItem from="1701193702959" duration="217000" />
+      <workItem from="1701193702959" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="Not compiling checkpoint">
       <created>1701038657737</created>
@@ -103,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701192539559</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Networking complete">
+      <created>1701193985654</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701193985654</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
