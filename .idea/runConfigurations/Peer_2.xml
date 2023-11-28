@@ -2,7 +2,7 @@
   <configuration default="false" name="Peer 2" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="project.StartProtocol" />
     <module name="Cryptography-project" />
-    <option name="PROGRAM_PARAMETERS" value="7000 src/project/PeerOneMessages/ 6000 localhost" />
+    <option name="PROGRAM_PARAMETERS" value="7000 src/project/PeerTwoMessages/ 6000 localhost" />
     <option name="VM_PARAMETERS" value="-Xmx4096m" />
     <method v="2">
       <option name="Make" enabled="true" />

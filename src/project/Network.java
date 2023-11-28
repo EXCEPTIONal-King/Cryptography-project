@@ -3,6 +3,9 @@ package project;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
 
 //Handles procedure of sending and preparing to send data
 public class Network {
@@ -21,7 +24,9 @@ public class Network {
 
         // This is temp, but I'm not sure what is being sent after encryption so currently I'm just putting a
         // byte array here
-        byte[] data;
+        public byte[] data;
+        public byte[] signature;
+        public PublicKey public_key;
 
         public NetworkData(byte[] data) {
             this.data = data;
@@ -40,8 +45,21 @@ public class Network {
             // Read the file content into the byte array
             inputStream.read(fileContent);
 
+            //hash file contents
+            MessageDigest digest = null;
+            try {
+                digest = MessageDigest.getInstance("SHA-256");
+            } catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException(e);
+            }
+            byte[] hashedBytes = digest.digest(fileContent);
             // Generate the NetworkData object
-            return new NetworkData(fileContent);
+            CryptoUtil signer = new CryptoUtil();
+
+            NetworkData toSend = new NetworkData(hashedBytes); //use data
+            toSend.signature = signer.signData(toSend.data);
+            toSend.public_key = signer.getPublicKey();
+            return toSend;
 
         } catch (IOException e) {
             e.printStackTrace();

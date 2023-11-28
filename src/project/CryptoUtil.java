@@ -1,6 +1,7 @@
 package project;
 
 import java.security.*;
+import java.util.Arrays;
 import java.util.Base64;
 
 public class CryptoUtil {
@@ -21,39 +22,37 @@ public class CryptoUtil {
         }
     }
 
-    public String signData(byte[] data) {
+    public byte[] signData(byte[] data) {
         try {
             Signature signature = Signature.getInstance("SHA256withRSA");
             signature.initSign(keyPair.getPrivate());
             signature.update(data);
 
             byte[] signatureBytes = signature.sign();
-            return Base64.getEncoder().encodeToString(signatureBytes);
+            return signatureBytes;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public boolean verifySignature(byte[] data, String signature, PublicKey verifyingKey) {
+    public boolean verifySignature(byte[] data, byte[] signature, PublicKey verifyingKey) {
         try {
             Signature sig = Signature.getInstance("SHA256withRSA");
             sig.initVerify(verifyingKey);
             sig.update(data);
-
-            byte[] signatureBytes = Base64.getDecoder().decode(signature);
-            return sig.verify(signatureBytes);
+            return sig.verify(signature);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public String hashMessage(String message) {
+    public byte[] hashMessage(String message) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hashedBytes = digest.digest(message.getBytes());
-            return Base64.getEncoder().encodeToString(hashedBytes);
+            return hashedBytes;
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             return null;
@@ -68,25 +67,25 @@ public class CryptoUtil {
 //        // Example usage of CryptoUtil
 //        CryptoUtil aliceCrypto = new CryptoUtil();
 //        CryptoUtil bobCrypto = new CryptoUtil();
-//
 //        // Alice signs a message
-//        String aliceMessage = "HELLO";
+//        String aliceMessage = "HELLO123";
 //        String aliceSignature = aliceCrypto.signData(aliceMessage.getBytes());
 //
 //        // Bob signs his own message
 //        String bobMessage = "HELLO123";
+//
 //        String bobSignature = bobCrypto.signData(bobMessage.getBytes());
 //
 //        // Alice and Bob exchange signatures and public keys
 //
 //        // Alice and Bob hash their messages
-//        String aliceHash = aliceCrypto.hashMessage(aliceMessage);
-//        String bobHash = bobCrypto.hashMessage(bobMessage);
+//        byte[] aliceHash = aliceCrypto.hashMessage(aliceMessage);
+//        byte[] bobHash = bobCrypto.hashMessage(bobMessage);
 //
 //        // Alice and Bob exchange hashes
 //
 //        // Alice and Bob compare the hashes
-//        boolean messagesMatch = aliceHash.equals(bobHash);
+//        boolean messagesMatch = Arrays.equals(aliceHash, bobHash);
 //        boolean signaturesMatch = aliceCrypto.verifySignature(aliceMessage.getBytes(), bobSignature, bobCrypto.getPublicKey())
 //                && bobCrypto.verifySignature(bobMessage.getBytes(), aliceSignature, aliceCrypto.getPublicKey());
 //
