@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="Networking complete">
+      <change afterPath="$PROJECT_DIR$/src/project/Encryptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Network.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/project/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StartProtocol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Encrypter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Network.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SignatureProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/SignatureProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verifier.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YjGmSJzoRB9sIb6jwPvSXZwWt6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "14",
+    "last_opened_file_path": "C:/Users/Jackson/IdeaProjects/Cryptography-project",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Client" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\project\PeerTwoMessages" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\ClientTwoMessages" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\ClientOneMessages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\project\PeerOneMessages" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\project" />
+      <recent name="C:\Users\Jackson\IdeaProjects\Cryptography-project\src\Client" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Compound.Both Peers">
+    <list>
+      <item itemvalue="Application.Peer 1" />
+      <item itemvalue="Application.Peer 2" />
+      <item itemvalue="Compound.Both Peers" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="" />
+      <created>1701031733679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701031733679</updated>
+      <workItem from="1701031735345" duration="7771000" />
+      <workItem from="1701039626917" duration="1946000" />
+      <workItem from="1701113240623" duration="5837000" />
+      <workItem from="1701193214025" duration="427000" />
+      <workItem from="1701193702959" duration="217000" />
+    </task>
+    <task id="LOCAL-00001" summary="Not compiling checkpoint">
+      <created>1701038657737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701038657737</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Networking complete">
+      <created>1701192539559</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701192539559</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Not compiling checkpoint" />
+    <MESSAGE value="Networking complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Networking complete" />
+  </component>
+</project>

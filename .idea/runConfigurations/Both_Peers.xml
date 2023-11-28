@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Both Peers" type="CompoundRunConfigurationType">
+    <toRun name="Peer 1" type="Application" />
+    <toRun name="Peer 2" type="Application" />
+    <method v="2" />
+  </configuration>
+</component>
