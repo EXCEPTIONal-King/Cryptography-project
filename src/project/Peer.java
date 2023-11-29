@@ -14,6 +14,7 @@ public class Peer {
     private final int remotePort;
     private final String remoteHost;
     private final Network.NetworkData[] remoteData;
+    private boolean verification;
     private Network.NetworkData[] localData;
 
     public Peer(int port, String messagesPath, int remotePort, String remoteHost) {
@@ -23,6 +24,7 @@ public class Peer {
         this.remoteHost = remoteHost;
         this.remoteData = new Network.NetworkData[5];
         this.localData = new Network.NetworkData[5];
+        this.verification = true;
 
         Thread listener = new Thread(this::startListener);
         listener.start();
@@ -43,13 +45,19 @@ public class Peer {
         } catch (Exception e) {
 
         }
+        if (!verification) {
+            System.out.println("Signature Verification failed!");
+            System.out.println("Aborting Comparisons");
+        } else {
+            for(int i = 0; i < 5; i++) {
+                int returned_index = compareData(remoteData[i].data);
+                if(returned_index != -1) {System.out.println("Remote file " + (i+1) + "  matches local file:  " + (returned_index+1)); }
+                else System.out.println("Remote file " + (i+1) + " has no local matches");
 
-        for(int i = 0; i < 5; i++) {
-            int returned_index = compareData(remoteData[i].data);
-            if(returned_index != -1) {System.out.println("Remote file " + (i+1) + "  matches local file:  " + (returned_index+1)); }
-            else System.out.println("Remote file " + (i+1) + " has no local matches");
-
+            }
         }
+
+
     }
 
     private void startListener() {
@@ -62,7 +70,9 @@ public class Peer {
                 Network.NetworkData remoteData = (Network.NetworkData) remoteInput.readObject(); // Blocks until read
                 this.remoteData[i] = remoteData;
                 CryptoUtil verifier = new CryptoUtil();
-                verifier.verifySignature(remoteData.data, remoteData.signature, remoteData.public_key);//remoteData verification (public key, remote data, and signature)
+                if(!verifier.verifySignature(remoteData.data, remoteData.signature, remoteData.public_key)){//remoteData verification (public key, remote data, and signature)
+                    this.verification = false;
+                }
                 //check if we have hash locally
                 System.out.printf("Received object %d from remoteSocket: %s\n", i, remoteData.toString());
             }
