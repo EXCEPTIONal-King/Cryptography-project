@@ -12,18 +12,6 @@ public class Network {
 
     //object to be sent between Alice and Bob
     public static class NetworkData implements Serializable {
-        /*String
-        char[]
-        byte[]
-
-                //collision-resistant one-way function
-                //hash a files contents
-        int Signature*/
-
-
-
-        // This is temp, but I'm not sure what is being sent after encryption so currently I'm just putting a
-        // byte array here
         public byte[] data;
         public byte[] signature;
         public PublicKey public_key;
@@ -31,7 +19,6 @@ public class Network {
         public NetworkData(byte[] data) {
             this.data = data;
         }
-
     }
 
     public static NetworkData generateNetworkDataFromFile(String filepath) {

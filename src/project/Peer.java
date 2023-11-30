@@ -30,20 +30,30 @@ public class Peer {
         listener.start();
 
         // Let both listeners start before attempting to send
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Thread sender;
 
-        Thread sender = new Thread(this::startSender);
+        sender = new Thread(() -> {
+            while (true) {
+                try {
+                    startSender();
+                    break;
+                } catch (IOException e) {
+                    try {
+                        System.out.println("Remote listener unavailable, waiting for remote...");
+                        Thread.sleep(5000);
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+            }
+        });
         sender.start();
 
         try {
             listener.join();
             sender.join();
         } catch (Exception e) {
-
+            throw new RuntimeException(e);
         }
         if (!verification) {
             System.out.println("Signature Verification failed!");
@@ -82,26 +92,22 @@ public class Peer {
         }
     }
 
-    private void startSender() {
-        try (Socket senderSocket = new Socket(this.remoteHost, this.remotePort)) {
-            ObjectOutputStream remoteOutput = new ObjectOutputStream(senderSocket.getOutputStream());
+    private void startSender() throws IOException {
+        // This will immediately throw an exception if the listener is unavailable
+        Socket senderSocket = new Socket(this.remoteHost, this.remotePort);
+        ObjectOutputStream remoteOutput = new ObjectOutputStream(senderSocket.getOutputStream());
 
-            for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
 
-                Network.NetworkData dataToSend = Network.generateNetworkDataFromFile(this.messagesPath +
-                        "/codeSegment" + (i+1) + ".bin"); //modify to give hashed data
-                localData[i] = dataToSend;
+            Network.NetworkData dataToSend = Network.generateNetworkDataFromFile(this.messagesPath +
+                    "/codeSegment" + (i+1) + ".bin"); //modify to give hashed data
+            localData[i] = dataToSend;
 
-                remoteOutput.writeObject(dataToSend); // Blocks until sending
-                remoteOutput.flush();
-                System.out.printf("Sent object %d to remoteSocket: %s\n", i, dataToSend);
-
-
-            }
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            remoteOutput.writeObject(dataToSend); // Blocks until sending
+            remoteOutput.flush();
+            System.out.printf("Sent object %d to remoteSocket: %s\n", i, dataToSend);
         }
+        senderSocket.close();
     }
 
     //checks remote hash against local hashes
