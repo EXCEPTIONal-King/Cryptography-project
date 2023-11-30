@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2c7195e4-26e5-4ffd-8381-68b3acd5079f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/CryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/CryptoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/Encryptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/SignatureProtocol.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +114,7 @@
       <workItem from="1701196411109" duration="5373000" />
       <workItem from="1701280406394" duration="334000" />
       <workItem from="1701281358644" duration="1801000" />
+      <workItem from="1701299800896" duration="2134000" />
     </task>
     <task id="LOCAL-00001" summary="Not compiling checkpoint">
       <created>1701038657737</created>

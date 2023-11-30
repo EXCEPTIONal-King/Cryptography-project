@@ -1,8 +1,6 @@
 package project;
 
 import java.security.*;
-import java.util.Arrays;
-import java.util.Base64;
 
 public class CryptoUtil {
 
